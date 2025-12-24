@@ -15,10 +15,10 @@ class LLMClient:
         if not api_key:
             raise ValueError("GEMINI_API_KEY not found in environment")
 
-        # Create client (NEW SDK way)
+        
         self.client = genai.Client(api_key=api_key)
 
-        # Use fast, low-latency model
+       
         self.model = "gemini-2.5-flash"
 
     def generate(self, prompt: str) -> str:
