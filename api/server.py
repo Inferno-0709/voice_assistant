@@ -12,7 +12,7 @@ from app.llm.client import LLMClient
 
 app = FastAPI(title="Krishna Voice Assistant")
 
-# Initialize once (important for performance)
+
 stt = HinglishSpeechToText()
 llm = LLMClient()
 intent_classifier = IntentClassifier(llm)
@@ -25,7 +25,7 @@ os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 @app.post("/process-audio")
 async def process_audio(file: UploadFile = File(...)):
-    # Save uploaded audio
+    
     audio_id = f"{uuid.uuid4()}.wav"
     audio_path = os.path.join(UPLOAD_DIR, audio_id)
 
@@ -41,7 +41,7 @@ async def process_audio(file: UploadFile = File(...)):
     # 3. Response
     response = responder.generate(intent)
 
-    # Optional: speak (server-side)
+    
     speaker.speak(response)
 
     return {
