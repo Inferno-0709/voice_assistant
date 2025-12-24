@@ -6,17 +6,17 @@ All tunable system parameters live here.
 # =========================
 # AUDIO SETTINGS
 # =========================
-SAMPLE_RATE = 16000          # Standard for speech models
-CHANNELS = 1                # Mono audio
-SILENCE_THRESHOLD = 0.09    # Volume level considered silence
-SILENCE_DURATION = 0.7      # Seconds of silence before stopping recording
+SAMPLE_RATE = 16000         
+CHANNELS = 1                
+SILENCE_THRESHOLD = 0.09   
+SILENCE_DURATION = 0.7      
 
 
 # =========================
 # STT SETTINGS
 # =========================
-WHISPER_MODEL_SIZE = "large"    # small = balance of speed & accuracy
-WHISPER_COMPUTE_TYPE = "float32"   # Faster inference on CPU
+WHISPER_MODEL_SIZE = "large"    
+WHISPER_COMPUTE_TYPE = "float32"   
 
 
 # =========================
