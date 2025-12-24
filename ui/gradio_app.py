@@ -8,7 +8,7 @@ from app.llm.client import LLMClient
 from app.tts.speaker import Speaker
 import os
 
-# Initialize logic
+
 try:
     stt = HinglishSpeechToText()
     llm = LLMClient()
@@ -66,8 +66,7 @@ def process_conversation(history):
     history.append({"role": "user", "content": user_text})
     history.append({"role": "assistant", "content": bot_text})
     
-    # Return updates to UI
-    # We pass audio_file to the Audio component which is set to autoplay
+   
     if audio_file:
         print(f"Generated audio file: {audio_file}")
         if not os.path.exists(audio_file):
