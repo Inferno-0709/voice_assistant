@@ -1,0 +1,26 @@
+# Environment Variables (Protect API Keys)
+.env
+.env.local
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Temporary Audio Files
+*.wav
+*.mp3
+uploads/
+
+# IDE Settings
+.vscode/
+.idea/
+
+# OS Files
+.DS_Store
+Thumbs.db
